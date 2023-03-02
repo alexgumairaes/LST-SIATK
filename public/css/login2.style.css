@@ -45,6 +45,15 @@ input.line {
   width: 100%;
 }
 
+.active, input[type='text'] {
+  border: none;
+  border-bottom: 2px solid #5677D0;
+  background: transparent;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+}
+
 .left {
   z-index: 1;
   box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.20);
@@ -82,4 +91,16 @@ input.line {
   transform: translate(-50%,-50%);
   text-align: center;
   display:inline-block;
+}
+
+.group {
+  position: relative;
+}
+
+.fa {
+  position: absolute;
+  bottom: 16px;
+  float: right;
+  left: 338px;
+  cursor: pointer;
 }

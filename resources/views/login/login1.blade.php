@@ -69,6 +69,7 @@
 
   <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
   <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  
   <script>
     var input = document.getElementById('password'),
         icon = document.getElementById('icon');

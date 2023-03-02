@@ -12,6 +12,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Poppins:wght@400;700&family=Quicksand:wght@700&display=swap" rel="stylesheet">
 
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+
   <title>{{ $title }}</title>
 </head>
 <body>
@@ -32,7 +34,11 @@
             <div class="row" style="margin-top: 16px">
               <div class="col-12 my-auto">
                 <label id="label">Password</label>
-                <input type="password" class="line @error('username') is-invalid @enderror" id="username" placeholder="password" name="username" required value="{{old('username')}}">
+                <input type="password" class="line @error('password') is-invalid @enderror" id="password" placeholder="password" name="password" required value="{{old('password')}}">
+                <div class="group">
+                  {{-- <span id="icon" class="fa iconify-inline m-auto" data-icon="mdi:eye-off-outline" style="font-size: 24px"></span> --}}
+                  <i id="icon" class="fa fa-eye-slash"></i>
+                </div>
               </div>
             </div>
             <div class="row" style="margin-top: 19px">
@@ -55,5 +61,26 @@
 
   <script src="{{ asset('js/bootstrap/bootstrap.min.js') }}"></script>
   <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+
+  <script>
+    var input = document.getElementById('password'),
+        icon = document.getElementById('icon');
+    
+        icon.onclick = function () {
+    
+          if(input.className == 'line') {
+            input.setAttribute('type', 'text');
+            icon.className = 'fa fa-eye';
+            input.className = 'active';
+    
+          } else {
+            input.setAttribute('type', 'password');
+            icon.className = 'fa fa-eye-slash';
+            input.className = 'line';
+          }
+    
+        }
+  </script>
+
 </body>
 </html>
