@@ -74,3 +74,12 @@ input.line {
   background-image: linear-gradient(to bottom left, #5677D0, #01DEC0);
   font-weight: 500;
 }
+
+#logo img {
+  height: 100px;
+  position: absolute;   
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  display:inline-block;
+}

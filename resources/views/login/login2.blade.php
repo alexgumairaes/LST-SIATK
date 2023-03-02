@@ -44,6 +44,11 @@
         </form>
       </div>
       <div class="col-6 text-center right">
+        <div class="row">
+          <div class="col" id="logo">
+            <img src="{{ asset('img/logo.png') }}" alt="">
+          </div>
+        </div>
       </div>
     </div>
   </div>
